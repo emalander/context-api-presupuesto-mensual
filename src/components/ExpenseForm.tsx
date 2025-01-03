@@ -120,7 +120,6 @@ export default function ExpenseForm() {
           >Categoria:</label>
           <select 
               id="category"  
-              value="Añade la cantidad del gasto: ej. 500"
               className="bg-slate-200 p-2" 
               name="category"
               onChange={handleChange}
