@@ -10,15 +10,15 @@ export default function FilterByCategory() {
   }
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-10">
+    <div className="bg-gradient-to-r from-slate-100 via-sky-100 to-zinc-100 shadow-lg rounded-lg p-10">
       <form>
         <div className="flex flex-col md:flex-row md:items-center gap-5">
-          <label className="text-gray-600 font-bold" htmlFor="">
+          <label className="text-black font-bold text-2xl" htmlFor="">
             Filtrar Gastos
           </label>
           <select 
             id="category"
-            className="bg-sky-200 p-3 flex-1 rounded"
+            className="bg-sky-200 shadow-md p-3 flex-1 rounded"
             onChange={handleChange}
           >
             <option value="">

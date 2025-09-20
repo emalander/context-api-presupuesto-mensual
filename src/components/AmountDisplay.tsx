@@ -8,9 +8,9 @@ type AmountDisplayProps = {
 
 export default function AmountDisplay({label, amount} : AmountDisplayProps) {
   return (
-    <p className="text-2xl text-sky-900 font-bold">
+    <p className="text-2xl text-sky-900 font-bold tracking-wide">
       {label && `${label}: `}
-      <span className="font-black">{formatcurrency(amount)}</span>
+      <span className="font-black tracking-normal ">{formatcurrency(amount)}</span>
     </p>
   )
 }

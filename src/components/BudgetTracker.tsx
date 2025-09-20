@@ -1,6 +1,5 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import AmountDisplay from "./AmountDisplay";
-import { XMarkIcon } from '@heroicons/react/24/solid'
 
 import ExpenseModal from "../components/ExpenseModal"
 import "react-circular-progressbar/dist/styles.css"
@@ -14,22 +13,22 @@ export default function BudgetTracker() {
   console.log(percent)
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div className="flex justify-center">
-        <CircularProgressbar
-          value={percent}
-          styles={buildStyles({
-            pathColor: percent === 100 ? '#DC2626' : '#22C55E',
-            trailColor: '#BAE6FD',
-            textSize: 9,
-            textColor: percent === 100 ? '#DC2626' : '#075985'
-          })}
-          text={`${percent}% Gastado`}
-        />
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+      <div className="w-full h-full flex justify-center items-center">
+        <div className="w-48 h-48">
+          <CircularProgressbar
+            value={percent}
+            styles={buildStyles({
+              pathColor: percent === 100 ? '#DC2626' : '#22C55E',
+              trailColor: '#BAE6FD',
+              textSize: 20,
+              textColor: percent === 100 ? '#DC2626' : '#075985'
+            })}
+            text={`${percent}%`}
+          />
+        </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-8">
-
-
+      <div className="flex flex-col justify-center items-start gap-6">
         <AmountDisplay
           label="Presupuesto"
           amount={state.budget}
@@ -42,20 +41,9 @@ export default function BudgetTracker() {
           label="Gastado"
           amount={totalExpenses}
         />
-
-      </div>
-      <div className='flex felx-col justify-between w-full'>
-        <div className='mr-10'>
-          <button
-          type="button"
-          className="bg-sky-800 w-full p-2 text-white uppercase font-bold rounded-lg flex items-center justify-center"
-          onClick={() => dispatch({ type: 'reset-app' })}
-        ><XMarkIcon className="w-12 h-12 mr-4" />
-          Resetear
-        </button>
-        </div>
         <ExpenseModal />
       </div>
+
     </div>
   )
 }

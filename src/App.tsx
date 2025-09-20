@@ -20,16 +20,16 @@ function App() {
   return (
     <>
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_2px)] bg-[size:16px_16px]">
-        <header className="bg-slate-500"> 
-          <h1 className="text-center uppercase text-4xl font-manrope font-bold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-stone-50 to-zinc-200 py-3">
+        <header className="bg-gradient-to-r from-sky-600 via-sky-700 to-sky-800"> 
+          <h1 className="text-center uppercase text-4xl tracking-widest font-manrope font-bold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-slate-400 via-stone-50 to-zinc-300 py-3">
             Presupuesto Mensual
           </h1>
         </header>
-        <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-20 p-10">
+        <div className="max-w-3xl mx-auto bg-gradient-to-r from-slate-100 via-sky-100 to-slate-100 shadow-lg rounded-lg mt-10 p-5">
           {isValidBUdget ? <BudgetTracker/>: <BudgetForm/>}
         </div>
         {isValidBUdget && (
-          <main className="max-w-3xl mx-auto py-10">
+          <main className="max-w-3xl mx-auto py-10 ">
             <FilterByCategory/>
             <ExpenseList/>
           </main>

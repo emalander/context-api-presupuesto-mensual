@@ -49,7 +49,7 @@ export default function ExpenseDetail({expense}:ExpenseDetailProps) {
               className="w-20"
             />
           </div>
-          <div className="border-gray-400 flex-1 space-y-3 space-x-1">
+          <div className="border-gray-400 flex-1 space-y-1 space-x-1">
             <p className="text-sm font-bold uppercase text-slate-500">{categoryInfo.name}</p>
             <p>{expense.expenseName}</p>
             <p className="text-slate-600 text-sm">{formatDate(expense.date!.toString())}</p>
