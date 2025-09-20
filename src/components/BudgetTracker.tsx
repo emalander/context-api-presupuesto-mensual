@@ -7,7 +7,7 @@ import { useBudget } from '../hooks/useBudget';
 
 export default function BudgetTracker() {
 
-  const { state, totalExpenses, remainingBudget, dispatch } = useBudget()
+  const { state, totalExpenses, remainingBudget} = useBudget()
   const percent = +((totalExpenses / state.budget) * 100).toFixed(2)
 
   console.log(percent)
